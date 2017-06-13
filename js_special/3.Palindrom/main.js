@@ -22,6 +22,12 @@ window.onload = function() {
             } else return false;
         }
 
-
+// ещё вариант
+var polindroms = [];
+for (var i = 0; i <= 100000; i++) {
+    if (i.toString().split('').reverse().join('') === i.toString()) {
+        polindroms.push(i);
+    }
+}
 
     } //end
