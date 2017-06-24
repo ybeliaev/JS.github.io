@@ -1,25 +1,10 @@
 window.addEventListener("DOMContentLoaded", init);
 
-function Button(name) {
+function BtnCreate(name) {
     this.name = name;
     this.show = function() {
         document.body.appendChild(this.btnElem);
     }
-}
-
-this.attachEvent_ = function() {
-    this.btnElem.addEventListener("click", this.btnClick_);
-}
-this.btnClick_ = function() {
-    console.log(this.name);
-}
-
-function BtnCreate() {
-    this.show = function() {
-        document.body.appendChild(this.btnElem);
-    }
-
-
     this.init_ = function() {
         this.btnElem = document.createElement("div");
         this.btnElem.className = "demo";
@@ -31,6 +16,6 @@ function BtnCreate() {
 }
 
 function init() {
-    var btn = new BtnCreate();
+    var btn = new BtnCreate("Button");
     btn.show();
 }
