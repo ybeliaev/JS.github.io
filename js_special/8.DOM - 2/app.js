@@ -8,6 +8,10 @@ for (var i = 0; i < element.length; i++) {
     //console.log(element[i]);
     console.log(element[i].textContent);
     //console.log(element[i].innerHTML);
+	
+	//element[i] - HTMLElement
+	element[i].style.color = 'blue';
+	
 }
 
 //Вариант с map
