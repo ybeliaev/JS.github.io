@@ -1,3 +1,4 @@
+
 function Triangle(w, h, color) {
 	this.w = w;
 	this.h = h;
