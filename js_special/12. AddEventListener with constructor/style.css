@@ -1,4 +1,4 @@
-#demo {
+.demo {
     padding: 10px;
     width: 100px;
     height: 75px;
@@ -13,14 +13,14 @@
     text-transform: uppercase;
 }
 
-#demo:hover {
+.demo:hover {
     background: linear-gradient(white, darkgrey);
 }
 
-#demo:active {
+.demo:active {
     background: linear-gradient(darkgrey, white);
 }
 
-#demo::selection {
+.demo::selection {
     background: transparent;
 }
