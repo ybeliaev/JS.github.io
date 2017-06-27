@@ -19,7 +19,7 @@
     border: 1px solid white;
 }
 
-.blackpanel {
+#blackpanel {
     position: absolute;
     top: 0;
     left: 0;
