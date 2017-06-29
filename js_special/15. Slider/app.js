@@ -1,38 +1,35 @@
 window.addEventListener("DOMContentLoaded", init);
 
-var blackpanel, imges;
+var container,
+    images,
+    imagesCount,
+    position = 0;
 
+function slide() {
+    console.log(position, imagesCount);
+
+    if (position < imagesCount - 1) {
+        var currentPosition = container.style.left;
+        container.style.left = (parseInt(currentPosition) - 200) + "px";
+
+
+    } else {
+        var currentPosition = container.style.left;
+        container.style.left = 0 + "px";
+        position = -1;
+    }
+    position++;
+    setTimeout(slide, 1800);
+
+}
 
 function init() {
-    // HTMLElement
-    blackpanel = document.getElementById('blackpanel');
-    // HTMLCollection
-    imges = document.getElementsByClassName('myImg');
-    console.log(imges);
-    for (var i = 0; i < imges.length; i++) {
-        imges[i].addEventListener('click', function() {
-            blackpanel.style.display = "flex";
-            console.log(this); // указывает на картинку
-            console.log(this.src); // указывает на путь к картинке
 
-            var bigImg = document.createElement("img");
-            bigImg.src = this.src;
-            bigImg.style.margin = "auto";
-            bigImg.style.width = "40vw";
-            bigImg.style.borderRadius = "5px";
+    container = document.getElementById('container');
+    console.log(container);
+    container.style.left = "0";
 
-            blackpanel.appendChild(bigImg);
-
-            blackpanel.addEventListener("click", function() {
-                this.removeChild(bigImg);
-                this.style.display = "none";
-
-            })
-        })
-    }
-    // можно вынести за цикл
-    // blackpanel.addEventListener("click", function() {
-    //             this.innerHTML = "";
-    //             this.style.display = "none";
-    //})
+    images = document.getElementsByClassName("myImg");
+    imagesCount = images.length;
+    setTimeout(slide, 2000);
 }
