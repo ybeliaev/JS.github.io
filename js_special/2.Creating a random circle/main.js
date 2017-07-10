@@ -28,14 +28,14 @@ window.onload = function() {
 
         //generateCircle();
 
-        //функция цикличного вызова. Почему колличество окружностей зависит от i и цикл не останавливается???
-        var i = 0;
+        //функция цикличного вызова. 
+        var i;
 
         function showCircle() {
             generateCircle();
 
-            if (i < 1) {
-                i++;
+            if (i < 10) {
+                i--;
                 setInterval(showCircle, 1000);
 
 
